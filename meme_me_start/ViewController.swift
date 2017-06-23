@@ -19,10 +19,10 @@ class ViewController: UIViewController {
     
     
     let memeTextAttributes:[String:Any] = [
-        NSStrokeColorAttributeName: UIColor.black/* TODO: fill in appropriate UIColor */,
-        NSForegroundColorAttributeName: UIColor.white/* TODO: fill in appropriate UIColor */,
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: 2.0/* TODO: fill in appropriate Float */]
+        NSStrokeColorAttributeName: UIColor.black,  // Border stroke
+        NSForegroundColorAttributeName: UIColor.white,  // Inside color
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,   // Font style
+        NSStrokeWidthAttributeName: 2.0]    // stroke width
 
     
     override func viewWillAppear(_ animated: Bool) {

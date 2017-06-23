@@ -40,7 +40,7 @@
 		43E3472B1EFC8B6F00E59DAE = {
 			isa = PBXGroup;
 			children = (
-				43E347361EFC8B6F00E59DAE /* meme_me_start */,
+				43E347361EFC8B6F00E59DAE /* meme_me */,
 				43E347351EFC8B6F00E59DAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		43E347361EFC8B6F00E59DAE /* meme_me_start */ = {
+		43E347361EFC8B6F00E59DAE /* meme_me */ = {
 			isa = PBXGroup;
 			children = (
 				43E347371EFC8B6F00E59DAE /* AppDelegate.swift */,
@@ -64,6 +64,7 @@
 				43E347401EFC8B6F00E59DAE /* LaunchScreen.storyboard */,
 				43E347431EFC8B6F00E59DAE /* Info.plist */,
 			);
+			name = meme_me;
 			path = meme_me_start;
 			sourceTree = "<group>";
 		};
