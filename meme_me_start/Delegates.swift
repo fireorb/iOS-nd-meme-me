@@ -14,11 +14,13 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
         }
-        print("hiii")
+        print("Image picked!")
         picker.dismiss(animated: true, completion: nil)
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("ok")
+        print("Image picking cancelled!")
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -28,6 +30,7 @@ class MemeTextObject: NSObject, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "BOTTOM" || textField.text == "TOP" {
             textField.text = ""

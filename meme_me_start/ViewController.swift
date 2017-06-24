@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         NSStrokeColorAttributeName: UIColor.black,  // Border stroke
         NSForegroundColorAttributeName: UIColor.white,  // Inside color
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,   // Font style
-        NSStrokeWidthAttributeName: 2.0]    // stroke width
+        NSStrokeWidthAttributeName: -3]    // stroke width
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        unsubscribeFromKeyboardNotifications()  // Stop watching keyboard
+        self.unsubscribeFromKeyboardNotifications()  // Stop watching keyboard
     }
     
     
@@ -52,14 +52,14 @@ class ViewController: UIViewController {
     @IBAction func cancelButton(_ sender: Any) {
         imageView.image = UIImage()
         shareButton.isEnabled = false
-        
     }
+    
     @IBAction func shareImage(_ sender: Any) {
         if imageView.image != nil {
             let memedImage = Meme.makeMemedImage(view: self.view)
             let activityView = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
             activityView.completionWithItemsHandler = { activity, success, items, error in
-                let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: memedImage)
+                let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: memedImage)   // Make a memed object
             }
             self.present(activityView, animated: true, completion: nil)
         }
@@ -81,15 +81,16 @@ class ViewController: UIViewController {
     }
     
     func keyboardWillShow(_ notification: Notification) {
-        
-        view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        if bottomTextField.isEditing {  // Only shift view if bottom text field is being edited.
+            view.frame.origin.y = 0 - getKeyboardHeight(notification)
+        }
     }
+    
     func keyboardWillHide(_ notification: Notification) {
         view.frame.origin.y = 0
     }
     
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-        
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.cgRectValue.height

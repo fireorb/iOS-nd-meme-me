@@ -22,11 +22,12 @@ struct Meme {
     }
     
     static func makeMemedImage(view: UIView) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)
-        view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
-        let memedImage = UIGraphicsGetImageFromCurrentImageContext()
+        // TODO: Make sure image doesn't have toolbars.. 
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)   // Start taking screen- size bitmap with given size
+        view.drawHierarchy(in: view.frame, afterScreenUpdates: true)    // Draw out the view
+        let memedImage = UIGraphicsGetImageFromCurrentImageContext()    // Get the bitmap
         UIGraphicsEndImageContext()
         
-        return memedImage != nil ? memedImage! : UIImage()
+        return memedImage != nil ? memedImage! : UIImage()  // If there's something, return it
     }
 }
