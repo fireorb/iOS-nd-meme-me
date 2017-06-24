@@ -53,8 +53,10 @@ class ViewController: UIViewController {
         
     }
     @IBAction func shareImage(_ sender: Any) {
-        if let im = imageView.image {
-            let activityView = UIActivityViewController(activityItems: [im], applicationActivities: nil)
+        if imageView.image != nil {
+            let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, view: self.view)
+            let memedImage = MemeObject.makeMemedImage()
+            let activityView = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
             self.present(activityView, animated: true, completion: nil)
         }
     }

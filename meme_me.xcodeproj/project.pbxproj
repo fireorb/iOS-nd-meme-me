@@ -13,6 +13,7 @@
 		43E3473F1EFC8B6F00E59DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E3473E1EFC8B6F00E59DAE /* Assets.xcassets */; };
 		43E347421EFC8B6F00E59DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E347401EFC8B6F00E59DAE /* LaunchScreen.storyboard */; };
 		43E3474A1EFCBB1C00E59DAE /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E347491EFCBB1C00E59DAE /* Delegates.swift */; };
+		43FAA6EA1EFE15F400A11131 /* Meme Maker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FAA6E91EFE15F400A11131 /* Meme Maker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		43E347411EFC8B6F00E59DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43E347431EFC8B6F00E59DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43E347491EFCBB1C00E59DAE /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		43FAA6E91EFE15F400A11131 /* Meme Maker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meme Maker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				43E347371EFC8B6F00E59DAE /* AppDelegate.swift */,
 				43E347391EFC8B6F00E59DAE /* ViewController.swift */,
 				43E347491EFCBB1C00E59DAE /* Delegates.swift */,
+				43FAA6E91EFE15F400A11131 /* Meme Maker.swift */,
 				43E3473B1EFC8B6F00E59DAE /* Main.storyboard */,
 				43E3473E1EFC8B6F00E59DAE /* Assets.xcassets */,
 				43E347401EFC8B6F00E59DAE /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				43E3473A1EFC8B6F00E59DAE /* ViewController.swift in Sources */,
 				43E3474A1EFCBB1C00E59DAE /* Delegates.swift in Sources */,
 				43E347381EFC8B6F00E59DAE /* AppDelegate.swift in Sources */,
+				43FAA6EA1EFE15F400A11131 /* Meme Maker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
