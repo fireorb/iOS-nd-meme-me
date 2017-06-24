@@ -12,18 +12,18 @@ struct Meme {
     let topText: String,
     bottomText: String,
     originalImage: UIImage,
-    view: UIView
+    memedImage: UIImage
     
-    init(topText: String, bottomText: String, originalImage: UIImage, view: UIView) {
+    init(topText: String, bottomText: String, originalImage: UIImage, memedImage: UIImage) {
         self.topText = topText
         self.bottomText = bottomText
         self.originalImage = originalImage
-        self.view = view
+        self.memedImage = memedImage
     }
     
-    func makeMemedImage() -> UIImage {
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawHierarchy(in: self.view.frame , afterScreenUpdates: true)
+    static func makeMemedImage(view: UIView) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)
+        view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
         let memedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

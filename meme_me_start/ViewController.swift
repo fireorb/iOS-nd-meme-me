@@ -39,14 +39,16 @@ class ViewController: UIViewController {
     
     let memeDelegate = MemeTextObject()
     override func viewDidLoad() {
-        topTextField.delegate = memeDelegate
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.textAlignment = .center
-        
-        bottomTextField.delegate = memeDelegate
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.textAlignment = .center
+        setTextProperties(topTextField)
+        setTextProperties(bottomTextField)
     }
+    
+    func setTextProperties(_ textfield: UITextField) {
+        textfield.delegate = memeDelegate
+        textfield.defaultTextAttributes = memeTextAttributes
+        textfield.textAlignment = .center
+    }
+    
     @IBAction func cancelButton(_ sender: Any) {
         imageView.image = UIImage()
         shareButton.isEnabled = false
@@ -54,28 +56,32 @@ class ViewController: UIViewController {
     }
     @IBAction func shareImage(_ sender: Any) {
         if imageView.image != nil {
-            let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, view: self.view)
-            let memedImage = MemeObject.makeMemedImage()
+            let memedImage = Meme.makeMemedImage(view: self.view)
             let activityView = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+            activityView.completionWithItemsHandler = { activity, success, items, error in
+                let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: memedImage)
+            }
             self.present(activityView, animated: true, completion: nil)
         }
     }
     
-    @IBAction func pickImage(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = .photoLibrary
-        self.present(picker, animated: true, completion: nil)
+    @IBAction func pickImageFromCamera(_ sender: UIBarButtonItem) {
+        if sender.tag == 2 {    // sender is album
+            pickImage(.photoLibrary)
+        }else{
+            pickImage(.camera)
+        }
     }
     
-    @IBAction func pickImageFromCamera(_ sender: Any) {
+    func pickImage(_ sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = sourceType
         self.present(imagePicker, animated: true, completion: nil)
     }
     
     func keyboardWillShow(_ notification: Notification) {
+        
         view.frame.origin.y = 0 - getKeyboardHeight(notification)
     }
     func keyboardWillHide(_ notification: Notification) {
