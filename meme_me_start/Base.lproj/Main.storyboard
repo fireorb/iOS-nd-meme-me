@@ -116,6 +116,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BottomToolbar" destination="KQP-ef-ku6" id="V80-kn-LoD"/>
+                        <outlet property="TopToolbar" destination="sZh-Ze-N6R" id="lQe-B8-hWg"/>
                         <outlet property="bottomTextField" destination="her-aB-RZa" id="LKL-xy-Dnc"/>
                         <outlet property="cameraButton" destination="dCJ-Ej-XGU" id="1D8-sF-AN4"/>
                         <outlet property="imageView" destination="aSl-ub-MP0" id="Jmc-wT-6Ce"/>

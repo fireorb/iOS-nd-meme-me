@@ -14,13 +14,17 @@ struct Meme {
     originalImage: UIImage,
     memedImage: UIImage
     
-    static func makeMemedImage(view: UIView) -> UIImage {
-        // TODO: Make sure image doesn't have toolbars.. 
+    static func makeMemedImage(view: UIView, viewsToHide: [UIView]) -> UIImage {
+        for view in viewsToHide {
+            view.alpha = 0  // Hide toolbars
+        }
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)   // Start taking screen- size bitmap with given size
         view.drawHierarchy(in: view.frame, afterScreenUpdates: true)    // Draw out the view
         let memedImage = UIGraphicsGetImageFromCurrentImageContext()    // Get the bitmap
         UIGraphicsEndImageContext()
-        
+        for view in viewsToHide {
+            view.alpha = 1  // Show toolbars
+        }
         return memedImage != nil ? memedImage! : UIImage()  // If there's something, return it
     }
 }

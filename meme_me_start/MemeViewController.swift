@@ -13,9 +13,11 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    
+    @IBOutlet weak var TopToolbar: UIToolbar!
+    @IBOutlet weak var BottomToolbar: UIToolbar!
     
     
     let memeTextAttributes:[String:Any] = [
@@ -56,7 +58,11 @@ class MemeViewController: UIViewController {
     
     @IBAction func shareImage(_ sender: Any) {
         if imageView.image != nil {
-            let memedImage = Meme.makeMemedImage(view: self.view)
+            var hiddenViews = [UIView]()
+            hiddenViews.append(TopToolbar)
+            hiddenViews.append(BottomToolbar)
+            
+            let memedImage = Meme.makeMemedImage(view: self.view, viewsToHide: hiddenViews)
             let activityView = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
             activityView.completionWithItemsHandler = { activity, success, items, error in
                 if success {
