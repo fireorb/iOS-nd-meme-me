@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeViewController.swift
 //  meme_me_start
 //
 //  Created by Mihir Thanekar on 6/22/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MemeViewController: UIViewController {
 
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
@@ -59,7 +59,9 @@ class ViewController: UIViewController {
             let memedImage = Meme.makeMemedImage(view: self.view)
             let activityView = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
             activityView.completionWithItemsHandler = { activity, success, items, error in
-                let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: memedImage)   // Make a memed object
+                if success {
+                    let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: memedImage)   // Make a memed object
+                }
             }
             self.present(activityView, animated: true, completion: nil)
         }
