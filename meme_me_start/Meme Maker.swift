@@ -14,13 +14,6 @@ struct Meme {
     originalImage: UIImage,
     memedImage: UIImage
     
-    init(topText: String, bottomText: String, originalImage: UIImage, memedImage: UIImage) {
-        self.topText = topText
-        self.bottomText = bottomText
-        self.originalImage = originalImage
-        self.memedImage = memedImage
-    }
-    
     static func makeMemedImage(view: UIView) -> UIImage {
         // TODO: Make sure image doesn't have toolbars.. 
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)   // Start taking screen- size bitmap with given size
