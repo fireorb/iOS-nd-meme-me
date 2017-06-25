@@ -41,6 +41,7 @@ class MemeViewController: UIViewController {
     
     let memeDelegate = MemeTextObject()
     override func viewDidLoad() {
+        super.viewDidLoad()
         setTextProperties(topTextField)
         setTextProperties(bottomTextField)
     }
