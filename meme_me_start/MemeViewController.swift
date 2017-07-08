@@ -68,11 +68,21 @@ class MemeViewController: UIViewController {
             activityView.completionWithItemsHandler = { activity, success, items, error in
                 if success {
                     let MemeObject = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: memedImage)   // Make a memed object
+                   
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate // Save to appDelegate
+                    appDelegate.memes.append(MemeObject)
+                    
+                    // RELOAD DATA
+                    
+                    
+                    self.dismiss(animated: true, completion: nil)   // Go back to sent memes
                 }
             }
             self.present(activityView, animated: true, completion: nil)
         }
     }
+    
+    //func save()
     
     @IBAction func pickImageFromCamera(_ sender: UIBarButtonItem) {
         if sender.tag == 2 {    // sender is album
