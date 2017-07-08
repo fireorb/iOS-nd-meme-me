@@ -63,8 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				43E3473B1EFC8B6F00E59DAE /* Main.storyboard */,
-				431E2FA11F1062F800CDBABC /* MemeCollectionViewCell.swift */,
 				43E347401EFC8B6F00E59DAE /* LaunchScreen.storyboard */,
+				431E2FA11F1062F800CDBABC /* MemeCollectionViewCell.swift */,
 				43E3473E1EFC8B6F00E59DAE /* Assets.xcassets */,
 			);
 			name = View;

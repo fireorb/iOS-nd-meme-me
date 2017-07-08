@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="3"/>
+            <point key="canvasLocation" x="1898" y="11"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GD0-no-t0S">
@@ -197,7 +197,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Glp-kq-HgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="-48"/>
+            <point key="canvasLocation" x="-1068" y="-48"/>
         </scene>
         <!--Grid-->
         <scene sceneID="Arq-eI-rXU">
@@ -263,13 +263,16 @@
                     <navigationItem key="navigationItem" id="STC-jZ-J8h">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MsV-w4-TFt">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="PEP-Ux-oCb"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="PEP-Ux-oCb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="YdF-Mu-0dA" id="gUE-Vn-iua"/>
+                    </connections>
                 </collectionViewController>
             </objects>
-            <point key="canvasLocation" x="700" y="308.9955022488756"/>
+            <point key="canvasLocation" x="788" y="309"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="tLV-lc-XLi">
@@ -301,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KT-sx-IVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1924" y="-48"/>
+            <point key="canvasLocation" x="-1846" y="-48"/>
         </scene>
     </scenes>
     <resources>

@@ -12,6 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class MemeCollectionViewController: UICollectionViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
@@ -19,8 +20,22 @@ class MemeCollectionViewController: UICollectionViewController {
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let space: CGFloat = 3.0
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        
+        let numberOfColumns: CGFloat = 3.0
+        let dimension = (self.view.frame.size.width - (2 * space))/numberOfColumns
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        collectionView?.reloadData()
+        if appDelegate.memes.count != 0 {
+            collectionView?.reloadData()
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

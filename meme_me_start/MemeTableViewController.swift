@@ -19,8 +19,10 @@ class MemeTableViewController: UITableViewController {
     }
  
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        tableView.reloadData()
+        super.viewDidAppear(animated)
+        if appDelegate.memes.count != 0 {   // Why reload if there's nothing to reload?
+            tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +34,7 @@ class MemeTableViewController: UITableViewController {
         
         let memesArray = appDelegate.memes
         cell?.imageView?.image = memesArray[indexPath.row].memedImage
-        cell?.textLabel?.text = "\(memesArray[indexPath.row].topText) \(memesArray[indexPath.row].bottomText)"
+        cell?.textLabel?.text = "\(memesArray[indexPath.row].topText)...\(memesArray[indexPath.row].bottomText)"
         
         return cell ?? UITableViewCell()
     }
