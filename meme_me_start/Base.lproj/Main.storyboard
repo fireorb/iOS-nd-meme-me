@@ -219,7 +219,6 @@
         <!--Meme Collection View Controller-->
         <scene sceneID="WMR-z5-P3H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rhS-VH-PPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="f0S-LD-BTK" customClass="MemeCollectionViewController" customModule="meme_me" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dWA-mh-Mkb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -295,6 +294,7 @@
                         <outlet property="flowLayout" destination="YdF-Mu-0dA" id="gUE-Vn-iua"/>
                     </connections>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhS-VH-PPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="308.9955022488756"/>
         </scene>
@@ -319,6 +319,8 @@
                             <constraint firstItem="9rh-lG-CxK" firstAttribute="top" secondItem="8c2-Hz-nDx" secondAttribute="bottom" id="1X4-Ez-zxv"/>
                             <constraint firstAttribute="trailing" secondItem="9rh-lG-CxK" secondAttribute="trailing" id="D8S-tb-Pvh"/>
                             <constraint firstItem="9rh-lG-CxK" firstAttribute="bottom" secondItem="aEj-k3-wDd" secondAttribute="top" id="Dyd-K6-UiW"/>
+                            <constraint firstItem="9rh-lG-CxK" firstAttribute="width" secondItem="io8-DG-9Gb" secondAttribute="width" id="RJ7-iF-XWa"/>
+                            <constraint firstItem="9rh-lG-CxK" firstAttribute="centerX" secondItem="io8-DG-9Gb" secondAttribute="centerX" id="ZjU-S5-OTh"/>
                             <constraint firstItem="9rh-lG-CxK" firstAttribute="leading" secondItem="io8-DG-9Gb" secondAttribute="leading" id="tB0-SE-Vrk"/>
                         </constraints>
                     </view>
