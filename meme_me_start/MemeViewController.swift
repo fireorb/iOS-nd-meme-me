@@ -71,18 +71,12 @@ class MemeViewController: UIViewController {
                    
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate // Save to appDelegate
                     appDelegate.memes.append(MemeObject)
-                    
-                    // RELOAD DATA
-                    
-                    
                     self.dismiss(animated: true, completion: nil)   // Go back to sent memes
                 }
             }
             self.present(activityView, animated: true, completion: nil)
         }
     }
-    
-    //func save()
     
     @IBAction func pickImageFromCamera(_ sender: UIBarButtonItem) {
         if sender.tag == 2 {    // sender is album

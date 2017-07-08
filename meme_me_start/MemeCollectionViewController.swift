@@ -16,13 +16,13 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
-        detailVC.image = appDelegate.memes[indexPath.row].memedImage
+        detailVC.image = appDelegate.memes[indexPath.row].memedImage    // Set memed image in instantiated vc
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Collection View Spacing and cell size
         let space: CGFloat = 3.0
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
@@ -33,7 +33,7 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if appDelegate.memes.count != 0 {
+        if appDelegate.memes.count != 0 {   // Reload data only if there is any
             collectionView?.reloadData()
         }
     }

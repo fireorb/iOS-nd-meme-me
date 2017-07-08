@@ -34,7 +34,7 @@ class MemeTableViewController: UITableViewController {
         
         let memesArray = appDelegate.memes
         cell?.imageView?.image = memesArray[indexPath.row].memedImage
-        cell?.textLabel?.text = "\(memesArray[indexPath.row].topText)...\(memesArray[indexPath.row].bottomText)"
+        cell?.textLabel?.text = "\(memesArray[indexPath.row].topText)...\(memesArray[indexPath.row].bottomText)"    // Truncate text to show top and bottom
         
         return cell ?? UITableViewCell()
     }
