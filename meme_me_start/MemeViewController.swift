@@ -78,11 +78,8 @@ class MemeViewController: UIViewController {
     }
     
     @IBAction func pickImageFromCamera(_ sender: UIBarButtonItem) {
-        if sender.tag == 2 {    // sender is album
-            pickImage(.photoLibrary)
-        }else{
-            pickImage(.camera)
-        }
+        // If tag is 2, source type is photo library
+        sender.tag == 2 ? pickImage(.photoLibrary) : pickImage(.camera)
     }
     
     func pickImage(_ sourceType: UIImagePickerControllerSourceType) {
