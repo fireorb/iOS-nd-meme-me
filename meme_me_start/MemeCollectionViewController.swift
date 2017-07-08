@@ -28,8 +28,9 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.minimumLineSpacing = space
         
         let numberOfColumns: CGFloat = 3.0
-        let dimension = (self.view.frame.size.width - (2 * space))/numberOfColumns
-        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        let width = (self.view.frame.size.width - (2 * space))/numberOfColumns
+        let height = (self.view.frame.size.height - (2 * space))/5.0
+        flowLayout.itemSize = CGSize(width: width, height: height)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,7 +48,9 @@ class MemeCollectionViewController: UICollectionViewController {
             print("Cell cast failure")
             return UICollectionViewCell()
         }
-        cell.savedMemedImage.image = appDelegate.memes[indexPath.row].memedImage
+        cell.savedMemedImage.image = appDelegate.memes[indexPath.row].originalImage
+        cell.bottomText.text = appDelegate.memes[indexPath.row].bottomText
+        cell.topText.text = appDelegate.memes[indexPath.row].topText
         
         return cell
     }

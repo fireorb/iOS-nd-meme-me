@@ -53,8 +53,7 @@ class MemeViewController: UIViewController {
     }
     
     @IBAction func cancelButton(_ sender: Any) {
-        imageView.image = UIImage()
-        shareButton.isEnabled = false
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func shareImage(_ sender: Any) {
