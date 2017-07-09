@@ -48,10 +48,7 @@ class MemeCollectionViewController: UICollectionViewController {
             print("Cell cast failure")
             return UICollectionViewCell()
         }
-        cell.savedMemedImage.image = appDelegate.memes[indexPath.row].originalImage
-        cell.bottomText.text = appDelegate.memes[indexPath.row].bottomText
-        cell.topText.text = appDelegate.memes[indexPath.row].topText
-        
+        cell.setupCellWithMeme(appDelegate.memes[indexPath.row])
         return cell
     }
 }

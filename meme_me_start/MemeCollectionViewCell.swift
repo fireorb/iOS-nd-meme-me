@@ -12,4 +12,11 @@ class MemeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var savedMemedImage: UIImageView!
     @IBOutlet weak var topText: UILabel!
     @IBOutlet weak var bottomText: UILabel!
+    
+    func setupCellWithMeme(_ meme: Meme) {
+        self.savedMemedImage.image = meme.originalImage
+        self.bottomText.text = meme.bottomText
+        self.topText.text = meme.topText
+
+    }
 }

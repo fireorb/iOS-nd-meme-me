@@ -9,42 +9,50 @@
 import UIKit
 
 class MemeViewController: UIViewController {
-
+    // I used a settings icon from flaticon as shown below: 
+    //<div>Icons made by <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    //E.g.: Icon made by Bogdan Rosu from www.flaticon.com
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
-    @IBOutlet weak var TopToolbar: UIToolbar!
+    @IBOutlet weak var TopToolbar: UINavigationItem!
     @IBOutlet weak var BottomToolbar: UIToolbar!
     
-    
-    let memeTextAttributes:[String:Any] = [
+    var memeTextAttributes: [String: Any] = [
         NSStrokeColorAttributeName: UIColor.black,  // Border stroke
         NSForegroundColorAttributeName: UIColor.white,  // Inside color
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,   // Font style
-        NSStrokeWidthAttributeName: -3]    // stroke width
-
+        NSFontAttributeName: UIFont(name: MemeTextSettings.fontFamilyName, size: CGFloat(MemeTextSettings.fontSize))!,   // Font style
+        NSStrokeWidthAttributeName: -3]
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera) // If camera is available, the button is
         shareButton.isEnabled = imageView.image != nil ? true: false    // If there's an image
         self.subscribeToKeyboardNotifications() // Tell us when keyboard shows
+        
+        print("Updated text attributes")
+        memeTextAttributes[NSFontAttributeName] = UIFont(name: MemeTextSettings.fontFamilyName, size: CGFloat(MemeTextSettings.fontSize))!
+        
+        setTextProperties(topTextField)
+        setTextProperties(bottomTextField)
+
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.unsubscribeFromKeyboardNotifications()  // Stop watching keyboard
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     
     let memeDelegate = MemeTextObject()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setTextProperties(topTextField)
-        setTextProperties(bottomTextField)
-    }
     
     func setTextProperties(_ textfield: UITextField) {
         textfield.delegate = memeDelegate
@@ -59,7 +67,9 @@ class MemeViewController: UIViewController {
     @IBAction func shareImage(_ sender: Any) {
         if imageView.image != nil {
             var hiddenViews = [UIView]()
-            hiddenViews.append(TopToolbar)
+            if let navBar = self.navigationController?.navigationBar {
+                hiddenViews.append(navBar)  // UINavigationBar is a subclass of UIView
+            }
             hiddenViews.append(BottomToolbar)
             
             let memedImage = Meme.makeMemedImage(view: self.view, viewsToHide: hiddenViews)
@@ -84,6 +94,7 @@ class MemeViewController: UIViewController {
     
     func pickImage(_ sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
         imagePicker.delegate = self
         imagePicker.sourceType = sourceType
         self.present(imagePicker, animated: true, completion: nil)

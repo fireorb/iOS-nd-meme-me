@@ -9,10 +9,10 @@
 import UIKit
 
 struct Meme {
-    let topText: String,
-    bottomText: String,
-    originalImage: UIImage,
-    memedImage: UIImage
+    let topText: String
+    let bottomText: String
+    let originalImage: UIImage
+    let memedImage: UIImage
     
     static func makeMemedImage(view: UIView, viewsToHide: [UIView]) -> UIImage {
         for view in viewsToHide {

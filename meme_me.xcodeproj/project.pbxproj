@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4310D86C1F11F39E0008D89C /* MemeTextSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310D86B1F11F39E0008D89C /* MemeTextSettings.swift */; };
 		431E2F9B1F103E0800CDBABC /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2F9A1F103E0800CDBABC /* MemeTableViewController.swift */; };
 		431E2F9D1F105DA200CDBABC /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2F9C1F105DA200CDBABC /* MemeCollectionViewController.swift */; };
 		431E2FA21F1062F800CDBABC /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2FA11F1062F800CDBABC /* MemeCollectionViewCell.swift */; };
 		431E2FA41F1068DD00CDBABC /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2FA31F1068DD00CDBABC /* MemeDetailViewController.swift */; };
+		431E2FA61F11B63600CDBABC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2FA51F11B63600CDBABC /* PickerViewController.swift */; };
 		43E347381EFC8B6F00E59DAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E347371EFC8B6F00E59DAE /* AppDelegate.swift */; };
 		43E3473D1EFC8B6F00E59DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E3473B1EFC8B6F00E59DAE /* Main.storyboard */; };
 		43E3473F1EFC8B6F00E59DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E3473E1EFC8B6F00E59DAE /* Assets.xcassets */; };
@@ -21,10 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4310D86B1F11F39E0008D89C /* MemeTextSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextSettings.swift; sourceTree = "<group>"; };
 		431E2F9A1F103E0800CDBABC /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		431E2F9C1F105DA200CDBABC /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
 		431E2FA11F1062F800CDBABC /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		431E2FA31F1068DD00CDBABC /* MemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
+		431E2FA51F11B63600CDBABC /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		43E347341EFC8B6F00E59DAE /* meme_me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meme_me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E347371EFC8B6F00E59DAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E347391EFC8B6F00E59DAE /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 				43E347491EFCBB1C00E59DAE /* Delegates.swift */,
 				431E2F9C1F105DA200CDBABC /* MemeCollectionViewController.swift */,
 				431E2F9A1F103E0800CDBABC /* MemeTableViewController.swift */,
+				431E2FA51F11B63600CDBABC /* PickerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				43FAA6E91EFE15F400A11131 /* Meme Maker.swift */,
+				4310D86B1F11F39E0008D89C /* MemeTextSettings.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -183,7 +189,9 @@
 				43E3474A1EFCBB1C00E59DAE /* Delegates.swift in Sources */,
 				43E347381EFC8B6F00E59DAE /* AppDelegate.swift in Sources */,
 				43FAA6EB1EFF27E600A11131 /* MemeViewController.swift in Sources */,
+				431E2FA61F11B63600CDBABC /* PickerViewController.swift in Sources */,
 				431E2F9B1F103E0800CDBABC /* MemeTableViewController.swift in Sources */,
+				4310D86C1F11F39E0008D89C /* MemeTextSettings.swift in Sources */,
 				431E2FA21F1062F800CDBABC /* MemeCollectionViewCell.swift in Sources */,
 				431E2F9D1F105DA200CDBABC /* MemeCollectionViewController.swift in Sources */,
 				43FAA6EA1EFE15F400A11131 /* Meme Maker.swift in Sources */,
