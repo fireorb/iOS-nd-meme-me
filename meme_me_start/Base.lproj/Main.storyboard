@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="Bs5-YR-JiI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" image="table" id="bCO-ic-DUY"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QWh-l6-6wc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QWh-l6-6wc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IJe-Bf-baK" id="ZBm-eh-5th">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -66,7 +66,7 @@
         <scene sceneID="BhZ-7Q-Qjh">
             <objects>
                 <navigationController id="wGl-Qz-rB7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OdF-LP-gw4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OdF-LP-gw4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,7 +251,7 @@
             <objects>
                 <navigationController id="Y13-Af-tgn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Grid" image="collection" id="pXn-FA-Mlk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cgh-R3-M4V">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cgh-R3-M4V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -267,7 +267,7 @@
         <scene sceneID="WMR-z5-P3H">
             <objects>
                 <collectionViewController id="f0S-LD-BTK" customClass="MemeCollectionViewController" customModule="meme_me" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dWA-mh-Mkb">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="dWA-mh-Mkb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

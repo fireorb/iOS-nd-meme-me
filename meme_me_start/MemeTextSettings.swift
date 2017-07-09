@@ -9,7 +9,7 @@
 import Foundation
 
 struct MemeTextSettings {
-    static var fontFamilyName: String = "HelveticaNeue-CondensedBlack"
+    static var fontFamilyName: String = "Impact"//"HelveticaNeue-CondensedBlack"
     static var fontSize: Int = 40
     
 }

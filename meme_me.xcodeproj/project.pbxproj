@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4310D86C1F11F39E0008D89C /* MemeTextSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310D86B1F11F39E0008D89C /* MemeTextSettings.swift */; };
+		4310D86E1F1209190008D89C /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4310D86D1F1208230008D89C /* impact.ttf */; };
 		431E2F9B1F103E0800CDBABC /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2F9A1F103E0800CDBABC /* MemeTableViewController.swift */; };
 		431E2F9D1F105DA200CDBABC /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2F9C1F105DA200CDBABC /* MemeCollectionViewController.swift */; };
 		431E2FA21F1062F800CDBABC /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2FA11F1062F800CDBABC /* MemeCollectionViewCell.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4310D86B1F11F39E0008D89C /* MemeTextSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextSettings.swift; sourceTree = "<group>"; };
+		4310D86D1F1208230008D89C /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = impact.ttf; path = ../impact.ttf; sourceTree = "<group>"; };
 		431E2F9A1F103E0800CDBABC /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		431E2F9C1F105DA200CDBABC /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
 		431E2FA11F1062F800CDBABC /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				431E2F9E1F105F7800CDBABC /* Controller */,
 				43E347371EFC8B6F00E59DAE /* AppDelegate.swift */,
 				43E347431EFC8B6F00E59DAE /* Info.plist */,
+				4310D86D1F1208230008D89C /* impact.ttf */,
 			);
 			name = meme_me;
 			path = meme_me_start;
@@ -173,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4310D86E1F1209190008D89C /* impact.ttf in Resources */,
 				43E347421EFC8B6F00E59DAE /* LaunchScreen.storyboard in Resources */,
 				43E3473F1EFC8B6F00E59DAE /* Assets.xcassets in Resources */,
 				43E3473D1EFC8B6F00E59DAE /* Main.storyboard in Resources */,
